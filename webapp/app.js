@@ -1,7 +1,7 @@
 new Vue({
   el: '#vue-app',
   data: {
-    searchSuccesfull: true,
+    searchSuccesfull: false,
     name: "Chris"
   },
   methods: {},
