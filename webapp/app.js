@@ -6,11 +6,14 @@ new Vue({
     responseText: '',
     moviesObject: [{'poster_img_url':'','title':'','popularity_summary':''}]
   },
+  mounted() {
+
+  },
   methods: {
     getResults: function() {
       if (this.searchString != '') {
         try {
-          fetch("http://localhost:9000/search/" + this.searchString)
+          fetch("http://localhost:9000/movies?search=" + this.searchString)
             .then(response => response.json())
             .then((data) => {
               this.moviesObject = data;

@@ -12,7 +12,9 @@
       <img src="img/svg/movie_reel.svg" alt="" width="100px">
       <h1>BYU Movie DB</h1>
     </header>
+
     <div id="vue-app">
+
       <div id="search">
         <div class="searchContainer">
           <div class="searchCenter">
@@ -21,6 +23,7 @@
           </div>
         </div>
       </div>
+
       <div id="results" v-show="searchSuccesfull">
         <div class="tile" v-for="movies in moviesObject">
           <div class="poster">
@@ -34,7 +37,9 @@
           </div>
         </div>
       </div>
+      
     </div>
+    <!-- End vue-app -->
 
     <footer>
 
