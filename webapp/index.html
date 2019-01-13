@@ -16,19 +16,21 @@
       <div id="search">
         <div class="searchContainer">
           <div class="searchCenter">
-            <input type="text" name="query" value="" class="searchBox" placeholder="Search for movies...">
-            <input type="text" name="button" value="search" class="searchButton" disabled>
+            <input type="text" name="query" v-on:keyup="keyPressed(this.event)" v-model="searchString" class="searchBox" placeholder="Search for movies...">
+            <input v-on:click="getResults" type="button" name="button" value="search" class="searchButton" >
           </div>
         </div>
       </div>
-      <div id="results">
-        <div class="tile" v-for="items in items">
+      <div id="results" v-show="searchSuccesfull">
+        <div class="tile" v-for="movies in moviesObject">
           <div class="poster">
-            <img src="https://image.tmdb.org/t/p/w500/lFSSLTlFozwpaGlO31OoUeirBgQ.jpg" alt="">
+            <span v-if="movies.poster_image_url != 'null'">
+              <img v-bind:src="movies.poster_image_url" alt="">
+            </span>
           </div>
           <div class="resultsText">
-            <h3>Jason Bourne</h3>
-            <p>16.173 out of 3346 votes</p>
+            <h3>{{ movies.title }}</h3>
+            <p>{{ movies.popularity_summary }}</p>
           </div>
         </div>
       </div>

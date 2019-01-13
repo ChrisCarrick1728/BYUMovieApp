@@ -11,6 +11,7 @@ body {
 header {
   background-color: white;
   height: 80px;
+  top: 0px;
   position: sticky;
 }
 
@@ -62,6 +63,7 @@ input {
 input.searchBox {
   width: 300px;
   border-radius: 20px 0px 0px 20px;
+  background-color: #333;
   padding-left: 40px;
   color: #888;
   font-weight: lighter;
@@ -74,6 +76,8 @@ input.searchButton {
   background-color: LightBlue;
   color: #333;
   cursor: pointer;
+  height: 53px;
+  border: none
 }
 
 input.searchButton:hover {
@@ -90,32 +94,44 @@ input.searchButton:hover {
   flex-wrap: wrap;
 }
 .tile {
+  width: 100%;
   margin: 20px;
   background-color: #444;
   margin-left: auto;
   margin-right: auto;
+  text-overflow: ellipsis;
 }
 .poster {
-  width: 300px;
   padding: 10px;
+  display: inline;
+  float: left;
 
 }
 .poster img {
-  max-width: 100%;
+  max-width: 150px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.resultsText {
+  display: inline;
+  float: left;
+  text-overflow: ellipsis;
+  padding-left: 20px;
 }
 
 .resultsText h3 {
+  padding-top: 10px;
   margin: 0px;
-  text-align: center;
+  text-align: left;
   font-family: sans-serif;
-  font-weight: lighter;
-  font-size: 20px;
+  font-size: 30px;
   color: LightBlue;
   letter-spacing: 2px;
 }
 
 .resultsText p {
-  text-align: center;
+  text-align: left;
   font-family: sans-serif;
   font-weight: lighter;
   font-size: 15px;
