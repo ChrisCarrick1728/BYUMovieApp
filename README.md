@@ -11,7 +11,7 @@ Let me know what I could've done better, because I'm sure there's a lot left for
 >
 >Email: carrick.chris@gmail.com
 >
->[LinkedIn](https://www.linkedin.com/in/chris-carrick-99528680/)
+>Connect with me on [LinkedIn](https://www.linkedin.com/in/chris-carrick-99528680/)
 ---
 # About the app
 Read below for instructions on how to launch/run the backend and frontend of this app
