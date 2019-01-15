@@ -28,7 +28,7 @@ There are 3 path's that can be followed once the **SparkJava** server is up and 
 * `http://localhost:9000/stop` can be used to stop the SparkJava server.
 
 ## Vue.js Frontend
-The **Vue.js** frontend was implemented using the **Nuxt CLI**. If you browse to `\webapp\byumoviedb\` in your terminal and then run the command `npm run dev` it will start a server instance at [localhost:3000](http://localhost:3000) that you can use to view the frontend page.
+The **Vue.js** frontend was implemented using the **Nuxt CLI**. You will need browse to `\webapp\byumoviedb\` and run the command `npm install --save nuxt` in your terminal to install **Nuxt**. Then run the command `npm run dev` to start a server instance at [localhost:3000](http://localhost:3000) that you can use to view the frontend page.
 
 ## Proposed Future Features
 If I was to continue to develop this app I would add more robust search functionality. the TMDB api has some awesome search features that we didn't get to use in our implementation. I would add database functionality and create a user comment board, where they could share what they liked and disliked, as well as respond to others posts allowing users to discuss the movies with others. I would clean up the UI and to make the user experience better. I would add components that could display which movies are trending, another to highlight new releases, and other features that would add visual interest to the main page.
