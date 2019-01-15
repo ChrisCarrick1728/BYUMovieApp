@@ -18,15 +18,39 @@ import io.github.cdimascio.dotenv.dotenv
  */
 class SearchMovie {
     private val logger: Logger = Logger.getAnonymousLogger()
+    private var success: Boolean = false
+    private var tmdbSearchResults = ""
+    private var searchString = ""
 
+    fun getSearchString(): String {
+        return this.searchString
+    }
+
+    private fun setSearchString(searchString: String) {
+        this.searchString = searchString
+    }
+    fun getTmdbSearchResults(): String {
+        return this.tmdbSearchResults;
+    }
+
+    private fun setTmdbSearchResults(tmdbSearchResults: String) {
+        this.tmdbSearchResults = tmdbSearchResults
+    }
+
+    fun getSuccess(): Boolean {
+        return this.success;
+    }
+
+    private fun setSuccess(success: Boolean) {
+        this.success = success
+    }
     /**
      * Performs the search
      * @param searchString Receives a String with the search query
      */
     fun searchMovie(searchString: String): String {
-        // Used to hold all header key, value pairs for search query.
         val params = HashMap<String, String>()
-
+        setSearchString(searchString)
         val dotenv = dotenv {
             directory = "./src/main/resources" // Pull environmental vars from .env file
             ignoreIfMalformed = false
@@ -59,6 +83,7 @@ class SearchMovie {
 
                 // Convert JSON response to kotlin object, and remove items we don't need
                 val movie = Gson().fromJson(response.toString(), MovieObject::class.java)
+                setTmdbSearchResults(Gson().toJson(movie))
                 val movieArray: ArrayList<Movie> = ArrayList()
                 var i = 0
                 try {
@@ -82,8 +107,10 @@ class SearchMovie {
                         i++
                     }
                 } catch (e: Exception) {
+                    setSuccess(false);
                     logger.log(Level.INFO, "ERROR: $e")
                 }
+                setSuccess(true);
                 return Gson().toJson(movieArray)
             }
         }
