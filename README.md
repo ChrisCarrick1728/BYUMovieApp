@@ -2,7 +2,7 @@
 This is an app created at the request of some awesome BYU recruiters to show off some coding skill!
 
 ## About Me
-![Image](https://cryptic-cove-38553.herokuapp.com/img/familyPic-8.jpg)
+![Image](https://github.com/ChrisCarrick1728/BYUMovieApp/blob/master/familyPic-8.jpg?raw=true)
 Hi, I'm **Chris Carrick**, and I'm passionate about software development. I love learning new technologies and stretching my abilities. I approach problems with an attitude that proves there's nothing I can't learn or do, and this challenge is no exception. I've never used **vue.js** or **kotlin** before so this was quite the challenge. These last couple of day's have been a massive data download as I've read and watched all sorts of tutorials to be able to come up to speed on this project. The actual coding was the easiest part. The part I struggled with most was the setup, and by that I mean learning how to setup and run a **kotlin** project, understanding what a **SparkJava** embedded server is and how to get it to work the way I wanted it to, and learning how to use the **Nuxt CLI** to start my frontend. In the end this has been a very rewarding project that has stretched my abilities and confirmed my belief that there is nothing I can not learn. In the end I was able to complete all frontend and backend requirements and recommendations from the challenge, and have been able to produce a fully functioning app.
 
 Let me know what I could've done better, because I'm sure there's a lot left for me to learn. I look forward to meeting with you and hope I have the opportunity to work with you in the future.
