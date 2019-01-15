@@ -22,5 +22,5 @@ There are 3 path's that can be followed once the server is up and running:
 
 * `http://localhost:9000/` Will take you to the root path and display a message __Server Started!__ to let you know that the server is up and running.
 
-* `http://localhost:9000/moives?search=toy%20story` Will take return the raw JSON that has been retrieved from [tmdb.com](http://www.tmdb.com) and then formatted and stripped of the unnecessary data.
+* `http://localhost:9000/movies?search=toy%20story` Will take return the raw JSON that has been retrieved from [tmdb.com](http://www.tmdb.com) and then formatted and stripped of the unnecessary data.
 * `http://localhost:9000/stop` can be used to stop the SparkJava server.

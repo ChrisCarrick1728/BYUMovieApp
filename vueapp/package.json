@@ -1,0 +1,9 @@
+{
+  "name": "vue-app",
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "dependencies": {
+    "nuxt": "^2.3.4"
+  }
+}
