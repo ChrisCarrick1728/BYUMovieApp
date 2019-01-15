@@ -1,23 +1,36 @@
 <template lang="html">
   <div>
-    <header>
-      <!-- <img src="./assets/movie_reel.svg" width="100px"> -->
-      <h1>BYU Movie DB</h1>
-    </header>
     <div id="search">
       <div class="searchContainer">
         <div class="searchCenter">
-          <input type="text" name="query" v-on:keyup="keyPressed(this.event)" v-model="searchString" class="searchBox" placeholder="Search for movies...">
-          <input v-on:click="getResults" type="button" name="button" value="search" class="searchButton" >
+          <input
+            v-model="searchString"
+            type="text"
+            name="query"
+            class="searchBox"
+            placeholder="Search for movies..."
+            v-on:keyup="keyPressed">
+          <input
+            type="button"
+            name="button"
+            value="search"
+            class="searchButton"
+            v-on:click="getResults">
         </div>
       </div>
     </div>
-    <div id="results" v-show="searchSuccesfull">
-      <div class="tile" v-for="movies in moviesObject">
+    <div
+      v-show="searchSuccesfull"
+      id="results">
+      <div
+        v-for="movies in moviesObject"
+        class="tile">
         <div class="innerTile">
           <div class="poster">
             <span v-if="movies.poster_image_url != 'null'">
-              <img v-bind:src="movies.poster_image_url" alt="">
+              <img
+                :src="movies.poster_image_url"
+                alt="">
             </span>
           </div>
           <div class="resultsText">
@@ -32,87 +45,63 @@
 
 <script>
 export default {
-  //new Vue({
+  data: function() {
+    return {
+      // searchSuccesfull: used to show/hide results screen
+      searchSuccesfull: false,
 
-    //el: '#vue-app',
-    data: function() {
-      return {
-        // searchSuccesfull: used to show/hide results screen
-        searchSuccesfull: false,
+      // searchString: bound to input text box to store user input
+      searchString: '',
 
-        // searchString: bound to input text box to store user input
-        searchString: '',
-
-        // moviesObject: JavaScript object to contain our search results
-        moviesObject: [{'movie_id': '', 'poster_img_url':'','title':'','popularity_summary':''}],
-
-        images: {
-          logo: require('@/assets/movie_reel.svg')
+      // moviesObject: JavaScript object to contain our search results
+      moviesObject: [
+        {
+          movie_id: '1',
+          poster_img_url:
+            'https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg',
+          title: 'test',
+          popularity_summary: 'test'
         }
+      ]
+
+      // images: {
+      //   logo: require('./static/movie_reel.svg')
+      // }
+    }
+  },
+  methods: {
+    // getResults: function that is run when user clicks search button/
+    getResults: function() {
+      // verify that the search string is not empty
+      if (this.searchString != '') {
+        // Perform async connection to webservice
+        fetch(
+          'http://localhost:9000/movies?search=' + encodeURI(this.searchString)
+        )
+          .then(response => response.json())
+          .then(data => {
+            this.moviesObject = data
+            this.searchSuccesfull = true
+          })
+      } else {
+        this.searchSuccesfull = false
       }
     },
-    methods: {
-
-      // getResults: function that is run when user clicks search button/
-      getResults: function() {
-        // verify that the search string is not empty
-        if (this.searchString != '') {
-          // Perform async connection to webservice
-          fetch("http://localhost:9000/movies?search=" + encodeURI(this.searchString))
-            .then(response => response.json())
-            .then((data) => {
-              this.moviesObject = data;
-              this.searchSuccesfull = true })
-        } else {
-          this.searchSuccesfull = false
-        }
-      },
-      // keyPressed: function to add esc and enter key functionallity
-      keyPressed: function(event) {
-        // keyCode: 13 = "return" key and calls the getResults function
-        if (event.keyCode == 13) {
-          this.getResults()
+    // keyPressed: function to add esc and enter key functionallity
+    keyPressed: function(event) {
+      // keyCode: 13 = "return" key and calls the getResults function
+      if (event.keyCode == 13) {
+        this.getResults()
         // keyCode: 27 = "esc" and clears our searchString
-        } else if (event.keyCode == 27) {
-          this.searchString = ''
-        }
+      } else if (event.keyCode == 27) {
+        this.searchString = ''
       }
-    },
+    }
+  }
 }
 </script>
 <style lang="css" scoped>
 @import url('https://fonts.googleapis.com/css?family=Paytone+One');
-
-html, body {
-  margin: 0px;
-}
-
-body {
-  background-color: #333;
-}
-
-header {
-  background-color: white;
-  height: 80px;
-  top: 0px;
-  position: sticky;
-}
-
-header img {
-  padding-left: 20px;
-}
-
-header h1 {
-  font-family: 'Paytone One', sans-serif;
-  color: #555;
-  font-size: 30px;
-  position: relative;
-  top: -105px;
-  left: 105px;
-  right: -105px;
-  padding-left: 20px;
-  margin-top: 20px;
-}
 
 #search {
   padding-top: 40px;
@@ -172,6 +161,10 @@ input.searchBox:focus {
 input.searchButton:hover {
   cursor: pointer;
   background-color: lightYellow;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: #444 !important;
 }
 
 #results {
