@@ -17,13 +17,13 @@ Let me know what I could've done better, because I'm sure there's a lot left for
 Read below for instructions on how to launch/run the backend and frontend of this app
 
 ## Kotlin Backend
-The **kotlin** portion was implemented using a [SparkJava](http://http://sparkjava.com/) embedded web server as was suggested in the app requirements. I used Intellij IDEA to code and run my **kotlin** code.
+The **kotlin** portion was implemented using a [SparkJava](http://sparkjava.com/) embedded web server as was suggested in the app requirements. I used Intellij IDEA to code and run my **kotlin** code.
 
 There are 3 path's that can be followed once the **SparkJava** server is up and running:
 
 * `http://localhost:9000/` Will take you to the root path and display the message __Server Started!__ to let you know that the server is up and running.
 
-* `http://localhost:9000/movies?search=toy%20story` Retrieves the raw JSON that from [tmdb.com](http://www.tmdb.com) and then formats and strips the results of any unnecessary data, which is then returned as a new JSON object to the client.
+* `http://localhost:9000/movies?search=toy%20story` Retrieves the raw JSON that from [tmdb.com](http://www.themoviedb.org) and then formats and strips the results of any unnecessary data, which is then returned as a new JSON object to the client.
 
 * `http://localhost:9000/stop` can be used to stop the SparkJava server.
 
