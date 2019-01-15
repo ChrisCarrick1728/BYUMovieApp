@@ -63,10 +63,6 @@ export default {
           popularity_summary: 'test'
         }
       ]
-
-      // images: {
-      //   logo: require('./static/movie_reel.svg')
-      // }
     }
   },
   methods: {
