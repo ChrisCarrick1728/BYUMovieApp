@@ -1,6 +1,4 @@
 import spark.Spark.*
-import java.util.logging.Level
-import java.util.logging.Logger
 
 /**
  * @author      Christopher Carrick <carrick.chris@gmail.com>
