@@ -28,4 +28,4 @@ There are 3 path's that can be followed once the **SparkJava** server is up and 
 * `http://localhost:9000/stop` can be used to stop the SparkJava server.
 ---
 ## Vue.js Frontend
-The **Vue.js** frontend was implemented using the **Nuxt CLI**. If you browse to `\webapp\byumoviedb\` in your terminal and the run the command `npm run dev` it will start a server instance at [localhost:3000](http://localhost:3000) that you can use to view the frontend page.
+The **Vue.js** frontend was implemented using the **Nuxt CLI**. If you browse to `\webapp\byumoviedb\` in your terminal and then run the command `npm run dev` it will start a server instance at [localhost:3000](http://localhost:3000) that you can use to view the frontend page.
