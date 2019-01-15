@@ -15,6 +15,8 @@ Let me know what I could've done better, because I'm sure there's a lot left for
 >[LinkedIn](https://www.linkedin.com/in/chris-carrick-99528680/)
 ---
 # About the app
+
+Read below for instructions on how to launch/run the backend and frontend of this app
 ---
 ## Kotlin Backend
 The **kotlin** portion was implemented using a [SparkJava](http://http://sparkjava.com/) embedded web server as was suggested in the app requirements. I used Intellij IDEA to code and run my **kotlin** code.
