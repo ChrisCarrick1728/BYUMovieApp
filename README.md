@@ -9,9 +9,9 @@ I'm **Chris Carrick**, and I've never used __vue.js__ or __kotlin__. These last 
 Let me know what I could've done better, because I'm sure there's a lot left for me to learn. I look forward to meeting with you.
 
 >Cell: 801-494-7232
-
+>
 >Email: carrick.chris@gmail.com
-
+>
 >[LinkedIn](https://www.linkedin.com/in/chris-carrick-99528680/)
 ---
 ## About the app
