@@ -17,7 +17,7 @@ Let me know what I could've done better, because I'm sure there's a lot left for
 Read below for instructions on how to launch/run the backend and frontend of this app
 
 ## Kotlin Backend
-The **kotlin** portion was implemented using a [SparkJava](http://sparkjava.com/) embedded web server as was suggested in the app requirements. I used Intellij IDEA to code and run my **kotlin** code.
+The **kotlin** portion was implemented using a [SparkJava](http://sparkjava.com/) embedded web server as was suggested in the app requirements. I used Intellij IDEA to code and run my **kotlin** code. You can open the intellij project by navigating to the `webservice` folder. You may have to update "Project Structure" to select the kotlin folder as a "source" so that the configuration will know where to locate "mainKt". 
 
 There are 3 path's that can be followed once the **SparkJava** server is up and running:
 
