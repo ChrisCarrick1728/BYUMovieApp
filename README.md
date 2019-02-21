@@ -1,5 +1,5 @@
-# BYUMovieApp
-This is an app created at the request of some awesome BYU recruiters to show off some coding skill!
+# MovieApp
+This is an app that uses Vue.js and Kotlin to connect to a 3rd party API and display the results to the user.
 
 ## About Me
 ![Image](https://github.com/ChrisCarrick1728/BYUMovieApp/blob/master/familyPic-8.jpg?raw=true)
